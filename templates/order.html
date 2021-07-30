@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<marquee ><a href="https://fontmeme.com/fonts/plush-font/"><img src="https://fontmeme.com/permalink/210725/7f7498fc25d49335d3a49b2ff2dafaed.png" alt="plush-font" border="0"></a></marquee>
+<div class="container mb-5">
+    
+    <div class="row justify-content-center mt-1">
+        <div class="col-md-12 col-sm-12 p-4">
+            <form method="POST">
+                {% csrf_token %}
+
+
+                <div class="pt-5" style="    background: black;
+                color: wheat;
+                padding: 2cm;">
+                    <a href="https://fontmeme.com/fonts/plush-font/"><img src="https://fontmeme.com/permalink/210725/bc765a16e56344f88c8dc5b3837a0726.png" alt="plush-font" border="0"></a>
+                    {% for veg in veg %}
+                    <div class="row">
+                        <div class="col-md-2 col-sm-12">
+                            <img class="rounded" src="{{ veg.image.url }}" width="150" height="100"/>
+                        </div>
+                        <div class="col-md-8 col-sm-12">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ veg.pk }}">
+                                    <label class="form-check-label">{{ veg.name }}</label>
+                                </div>
+                                <p class="font-weight-bold pl-5">{{ veg.price }}</p>
+                            </div>
+                            <p>{{ veg.description }}</p>
+                        </div>
+                    </div>
+                    <hr />
+                {% endfor %}
+                </div>
+
+                <div class="pt-5">
+                    {% for non_veg in non_veg %}
+                    <div class="row mt-4">
+                        <div class="col-md-2 col-sm-12">
+                            <img class="rounded" src="{{ non_veg.image.url }}" width="150" height="100"/>
+                        </div>
+                        <div class="col-md-8 col-sm-12">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ non_veg.pk }}">
+                                    <label class="form-check-label">{{ non_veg.name }}</label>
+                                </div>
+                                <p class="font-weight-bold pl-5">{{ non_veg.price }}</p>
+                            </div>
+                            <p>{{ non_veg.description }}</p>
+                        </div>
+                    </div>
+                    <hr />
+                    {% endfor %}
+                </div>
+
+
+                <div class="pt-5" style="padding: 1cm;
+                color: wheat;
+                background: black;">
+                                    <a href="https://fontmeme.com/fonts/plush-font/"><img src="https://fontmeme.com/permalink/210725/e602f1546c482b9a6630d33def22d639.png" alt="plush-font" border="0"></a>
+
+                    {% for dessert in desserts %}
+                    <div class="row mt-4">
+
+                        <div class="col-md-2 col-sm-12">
+                            <img class="rounded" src="{{ dessert.image.url }}" width="150" height="100"/>
+                        </div>
+                        <div class="col-md-8 col-sm-12">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ dessert.pk }}">
+                                    <label class="form-check-label">{{ dessert.name }}</label>
+                                </div>
+                                <p class="font-weight-bold pl-5">{{ dessert.price }}</p>
+                            </div>
+                            <p>{{ dessert.description }}</p>
+                        </div>
+                    </div>
+                    <hr />
+                    {% endfor %}
+                </div>
+
+
+                <div class="pt-5" style="color: wheat;
+                padding: 1cm;
+                background: black;">
+                <a href="https://fontmeme.com/fonts/plush-font/"><img src="https://fontmeme.com/permalink/210725/91a9bcdd754c73936983de9e7bf26d33.png" alt="plush-font" border="0"></a>
+
+                   {% for drink in drinks %}
+                    <div class="row mt-4">
+                        <div class="col-md-2 col-sm-12">
+                            <img class="rounded" src="{{ drink.image.url }}" width="150" height="100"/>
+                        </div>
+                        <div class="col-md-8 col-sm-12">
+                            <div class="d-flex flex-row">
+                                <div class="form-group form-check">
+                                    <input type="checkbox" name="items[]" class="form-check-input" value="{{ drink.pk }}">
+                                    <label class="form-check-label">{{ drink.name }}</label>
+                                </div>
+                                <p class="font-weight-bold pl-5">{{ drink.price }}</p>
+                            </div>
+                            <p>{{ drink.description }}</p>
+                        </div>
+                    </div>
+                    <hr />
+                    {% endfor %}
+                </div>
+
+                <button class="btn btn-dark mt-5">Place Order!</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
