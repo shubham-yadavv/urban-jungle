@@ -62,13 +62,15 @@ class Order(View):
             'items': order_items['items'],
             'price': price
         }
-
-        
+  
         return render(request,'order_confirmation.html', context)
 
-
-
-
-
+class User(View):
+    def get(self, request, *args, **kwargs):
+        data =  request.POST.get('name')
+        d1 = request.POST.get('Phno')
+        d2 = request.POST.get('Email')
+        print(d2)
+        return render(request,'checkout.html')
    
 
