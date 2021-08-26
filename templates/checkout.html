@@ -5,16 +5,17 @@
 <div class="container mb-5" style="background: black;
 color: wheat;">
     <div class="row justify-content-center mt-1">
-<div class="row">
+
+                <div class="row">
     <form class="col s12" method="get">
       <div class="row">
         <div class="input-field col s6">
-            
+
           <input id="first_name" type="text" name="name" class="validate">
           <label for="first_name">First Name</label>
         </div>
         <div class="input-field col s6">
-            
+
           <input id="last_name" type="text" name="Phno" class="validate">
           <label for="last_name">Phone Number</label>
         </div>
@@ -22,18 +23,28 @@ color: wheat;">
 
       <div class="row">
         <div class="input-field col s12">
-            
+
           <input id="email" type="email" name="Email" class="validate">
           <label for="email">Email</label>
-          
+
         </div>
       </div>
-      <button type="submit" class="btn btn-dark">Submit</button>
+        <button type="submit" class="btn btn-dark">Submit</button>
      </form>
+
+
+    </div>
+<div class="row justify-content-center mt-5">
+        <div class="col-md-5 col-sm-12 text-center">
+            <h1>Order Submitted!</h1>
+            <p>You should receive a confirmation email soon.</p>
+                <div class="progress">
+      <div class="indeterminate"></div>
   </div>
-  </div>
+
+            <a href="{% url 'index' %}">Go to the homepage</a>
+        </div>
+    </div>
+    </div>
 </div>
-  
-  </div>
-  <h1>you entered  {{name}}</h1>
   {% endblock content %}
