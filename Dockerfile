@@ -1,16 +1,16 @@
-# FROM Python:3
+FROM Python:3
 
-# ENV PYTHOUNBUFFERD 1
+ENV PYTHOUNBUFFERD 1
 
-# WORKDIR /app
+WORKDIR /app
 
-# ADD . /app/
+ADD . /app/
 
-# COPY ./requirement.txt /app/requirement.txt
+COPY ./requirement.txt /app/requirement.txt
 
-# RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
-# COPY . /app
+COPY . /app
 
 
 
