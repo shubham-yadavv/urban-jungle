@@ -1,7 +1,11 @@
 from django.shortcuts import render
 from django.views import View
-from .models import MenuItem, Category, OrderModel
+from selenium import webdriver
 
+from .models import MenuItem, Category, OrderModel
+from selenium import webdriver
+from django.core.mail import send_mail
+from django.conf import settings
 
 class Index(View):
     def get(self, request, *args, **kwargs):
@@ -62,13 +66,28 @@ class Order(View):
             'items': order_items['items'],
             'price': price
         }
-
-        
+  
         return render(request,'order_confirmation.html', context)
 
+class User(View):
+     def get(self, request, *args, **kwargs):
+         if request.method == "GET":
+             name = request.GET.get('fname')
+             phno = request.GET.get('phno')
+             email = request.GET.get('email')
+             print(name,email)
+         send_mail(
+            'Order Confirmation',
+            'Hello ' + str(name) + ", \n Your order has been submitted. \nThank you for your support. \n\n\n\nThanks and Regards,\nUrban Jungle",
+            settings.EMAIL_HOST_USER,
+            [email],
+            fail_silently=False)
+
+
+         return render(request, 'checkout.html')
 
 
 
-
-   
-
+class Final(View):
+     def get(self, request, *args, **kwargs):
+         return render(request,'info.php')

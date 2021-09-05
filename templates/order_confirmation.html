@@ -1,15 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <div class="container mb-5" style="background: black;
 color: wheat;">
     <div class="row justify-content-center mt-1">
-        <div class="col-md-5 col-sm-12 p-4 text-center">
-            <h1>Order Submitted!</h1>
-            <p>You should receive a confirmation email soon.</p>
-            <a href="{% url 'index' %}">Go to the homepage</a>
-        </div>
-    </div>
 
     <div class="row justify-content-center mt-5">
         <div class="col-md-5 col-sm-12 text-center">
@@ -21,5 +16,8 @@ color: wheat;">
             <p class="font-weight-bold pt-4">Total: {{ price }}</p>
         </div>
     </div>
+    </div>
 </div>
-{% endblock content %}
+<a href="{% url 'User' %}" button class="btn btn-dark">Proceed to Checkout</a>
+
+        {% endblock content %}
