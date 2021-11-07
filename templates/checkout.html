@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+{% load static %}
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js" xmlns=""></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
       xmlns="http://www.w3.org/1999/html">
@@ -12,6 +12,7 @@ color: wheat;">
         <h3>Pls enter info</h3>
 
                 <div class="row">
+
     <form class="col s12"  method="get" >
 
       <div class="row">
@@ -37,11 +38,13 @@ color: wheat;">
         </div>
       </div>
 
-        <button type="submit" class="btn btn-dark">Submit</button>
-     </form>
+        <button type="submit"  class="btn btn-dark">Submit</button>
+<a href="{% url 'final' %}" button class="btn btn-dark">Proceed</a>
+    </form >
                 </div>
 
 </div>
 
 </div>
+
   {% endblock content %}

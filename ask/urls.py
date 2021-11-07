@@ -20,16 +20,17 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from foodie.views import Index, About, Order,User
+from foodie.views import Index, About, Order,User, Final
 from django.views.static import serve
 from django.conf.urls import url
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Index.as_view(), name='index'),
     path('about/', About.as_view(), name='about'),
     path('order/', Order.as_view(), name='order'),
     path('Info/', User.as_view(), name='User'),
-    #path('Checkout/', Final.as_view(), name='final'),
+    path('Checkout/', Final.as_view(), name='final'),
 
     # url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}),
     # url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),

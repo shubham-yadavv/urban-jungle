@@ -1,4 +1,4 @@
-#!/Users/shubham/Documents/PBL-ASK/env/bin/python3.9
+#!/Users/shubham/Projects/urban-jungle/env/bin/python3.9
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 

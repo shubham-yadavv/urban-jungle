@@ -1,0 +1,18 @@
+
+2021-11-07 17:24:49.964342
+{'items': [{'id': 26, 'name': 'chicken tikka', 'price': Decimal('300.00')}, {'id': 27, 'name': 'Chicken Manchurian', 'price': Decimal('300.00')}, {'id': 33, 'name': 'Tomato soup', 'price': Decimal('200.00')}], 'price': Decimal('800.00')}
+
+2021-11-07 17:25:03.639674
+{'items': [{'id': 26, 'name': 'chicken tikka', 'price': Decimal('300.00')}, {'id': 27, 'name': 'Chicken Manchurian', 'price': Decimal('300.00')}, {'id': 33, 'name': 'Tomato soup', 'price': Decimal('200.00')}], 'price': Decimal('800.00')}
+None
+None
+None
+shubh
+
+shubham22121@gmail.com
+
+2021-11-07 18:33:27.919741
+{'items': [{'id': 26, 'name': 'chicken tikka', 'price': Decimal('300.00')}], 'price': Decimal('300.00')}
+None
+None
+None
