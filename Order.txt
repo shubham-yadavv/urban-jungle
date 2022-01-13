@@ -16,3 +16,9 @@ shubham22121@gmail.com
 None
 None
 None
+
+2022-01-13 17:19:33.322686
+{'items': [{'id': 32, 'name': 'Prawns', 'price': Decimal('450.00')}, {'id': 17, 'name': 'wine', 'price': Decimal('300.00')}], 'price': Decimal('750.00')}
+None
+None
+None
